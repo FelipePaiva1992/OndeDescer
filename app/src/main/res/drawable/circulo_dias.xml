@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item >
+    
+         <selector>
+ 		
+		    <item
+	        	android:state_checked="true" 
+	        	android:state_pressed="true"
+                >
+	        	
+		       	<shape android:shape="oval" >			
+					<solid android:color="@android:color/white" />
+				</shape>
+		        
+		    </item>
+		    <item 	
+		        android:state_checked="true"
+		        android:state_focused="false">
+		        	
+		        <shape android:shape="oval" >			
+					<solid android:color="@android:color/white" />
+				</shape>
+		        
+		    </item>
+		    
+		    <item 	
+		        android:state_checked="false"
+		        android:state_pressed="true" >
+		        <shape android:shape="ring"
+		            	android:innerRadius="25dp"
+						android:thickness="1dp"
+						android:useLevel="false" >			
+					<solid android:color="@android:color/transparent" />
+				</shape>
+		    </item>
+		    
+		    <item 	 
+		        android:state_checked="false"
+		        android:state_focused="false" >
+		        <shape android:shape="ring"
+		            	android:innerRadius="25dp"
+						android:thickness="1dp"
+						android:useLevel="false"
+						>			
+					<solid android:color="@android:color/transparent" />
+				</shape>
+		    </item>
+		
+		</selector>
+    </item>
+    
+
+</layer-list>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/root"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="45dp"
+        android:background="@android:color/black" >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/menu"
+        android:paddingTop="@dimen/dim_10"
+        android:paddingLeft="@dimen/dim_10"
+        android:paddingBottom="@dimen/dim_10"
+        android:paddingRight="@dimen/dim_10">
+
+        <ImageView
+            android:layout_width="@dimen/dim_40"
+            android:layout_height="@dimen/dim_40"
+            android:id="@+id/imageView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/img_circle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Amendo Bobo"
+            android:id="@+id/textView"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imageView"
+            android:paddingLeft="@dimen/dim_10"
+            android:paddingRight="@dimen/dim_10"
+            android:fontFamily="sans-serif-thin"/>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_agenda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/menu"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
+
+    <ImageButton
+        android:id="@+id/btn_agenda"
+        android:layout_width="@dimen/dim_50"
+        android:layout_height="@dimen/dim_50"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_oval"
+        android:src="@drawable/ic_add_white_18dp"
+        android:layout_marginBottom="@dimen/dim_20"/>
+
+</RelativeLayout>

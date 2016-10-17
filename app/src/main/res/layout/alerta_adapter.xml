@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp">
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/imageButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="false"
+            android:src="@drawable/bus_ativo"
+            android:background="@android:color/black"/>
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch1"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp" />
+
+        <TextView
+            android:id="@+id/tx_nome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Teste"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/imageButton"
+            android:fontFamily="sans-serif-thin"
+            android:paddingLeft="10dp"
+            android:layout_above="@+id/switch1" />
+
+        <TextView
+            android:id="@+id/tx_metro"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_toEndOf="@+id/imageButton"
+            android:layout_above="@+id/tx_end"
+            android:gravity="center_vertical"
+            android:text="500 metros"
+            android:textSize="18sp"
+            android:paddingLeft="10dp"
+            android:fontFamily="sans-serif-thin"
+            android:layout_alignTop="@+id/switch1" />
+
+        <TextView
+            android:id="@+id/tx_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Rua teste, 1003 sao paulo"
+            android:layout_below="@+id/switch1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/imageButton"
+            android:fontFamily="sans-serif-thin"
+            android:paddingLeft="10dp" />
+
+    </RelativeLayout>
+</LinearLayout>

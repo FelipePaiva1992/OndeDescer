@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@android:color/black" >
+	
+  <RelativeLayout 
+    android:layout_width="350dp"
+    android:layout_height="390dp"
+    android:gravity="center_horizontal"
+    android:background="#33354b" >
+
+
+      <RelativeLayout
+          android:layout_width="fill_parent"
+          android:layout_height="280dp"
+          android:layout_alignParentTop="true"
+          android:layout_alignParentStart="true"
+          android:id="@+id/content1">
+
+
+          <EditText
+              android:id="@+id/tx_nome_agenda"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:inputType="textPersonName"
+              android:ems="10"
+              android:layout_alignParentTop="true"
+              android:layout_alignParentStart="true"
+              android:layout_alignParentEnd="true"
+              android:hint="Nome do evento"
+              android:layout_marginTop="@dimen/dim_10"
+              android:layout_marginLeft="@dimen/dim_10"
+              android:layout_marginRight="@dimen/dim_10"
+              android:textColor="@android:color/white"
+              android:textSize="18sp"
+              android:textColorHint="@android:color/white"
+              android:fontFamily="sans-serif-thin" />
+
+          <EditText
+              android:id="@+id/tx_endereco"
+              android:layout_width="190dp"
+              android:layout_height="wrap_content"
+              android:inputType="textPersonName"
+              android:ems="10"
+              android:layout_alignParentStart="true"
+              android:hint="Endereço"
+              android:layout_below="@+id/tx_nome_agenda"
+              android:layout_marginTop="@dimen/dim_10"
+              android:layout_marginLeft="@dimen/dim_10"
+              android:layout_marginRight="@dimen/dim_10"
+              android:textColor="@android:color/white"
+              android:textSize="17sp"
+              android:textColorHint="@android:color/white"
+              android:fontFamily="sans-serif-thin"
+              android:imeOptions="actionNext" />
+
+          <EditText
+              android:id="@+id/tx_numero"
+              android:layout_width="50dp"
+              android:layout_height="wrap_content"
+              android:inputType="number"
+              android:ems="10"
+              android:layout_alignTop="@+id/tx_endereco"
+              android:layout_alignEnd="@+id/tx_nome_agenda"
+              android:layout_toEndOf="@+id/tx_endereco"
+              android:textSize="16sp"
+              android:hint="N°"
+              android:imeOptions="actionNext"
+              android:fontFamily="sans-serif-thin"/>
+
+          <EditText
+              android:id="@+id/tx_cidade"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_below="@+id/tx_endereco"
+              android:layout_alignEnd="@+id/tx_endereco"
+              android:inputType="textPersonName"
+              android:textSize="16sp"
+              android:layout_marginTop="@dimen/dim_10"
+              android:hint="Cidade"
+              android:imeOptions="actionDone"
+              android:layout_alignStart="@+id/tx_endereco"
+              android:fontFamily="sans-serif-thin"
+              />
+
+          <Spinner
+              android:id="@+id/cb_estado"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_alignTop="@+id/tx_cidade"
+              android:layout_alignBottom="@+id/tx_cidade"
+              android:layout_alignEnd="@+id/tx_numero"
+              android:layout_toEndOf="@+id/tx_cidade"
+              android:entries="@array/array_states"
+              android:layout_alignStart="@+id/tx_numero"
+              android:fontFamily="sans-serif-thin"
+              android:textSize="15sp"
+              android:spinnerMode="dialog" />
+
+          <TextView
+              android:id="@+id/textView3"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceMedium"
+              android:text="Avisar em"
+              android:textColor="@android:color/white"
+              android:fontFamily="sans-serif-thin"
+              android:layout_marginTop="@dimen/dim_10"
+              android:textSize="14sp"
+              android:layout_below="@+id/tx_cidade"
+              android:layout_alignStart="@+id/tx_cidade"
+              android:gravity="center_vertical"/>
+
+          <SeekBar
+              android:id="@+id/sk_aviso"
+              android:layout_width="150dp"
+              android:layout_height="wrap_content"
+              android:max="1000"
+              android:progress="500"
+              android:layout_below="@+id/textView3"
+              android:layout_alignStart="@+id/textView3"
+              android:layout_alignEnd="@+id/tx_cidade" />
+
+          <TextView
+              android:id="@+id/txt_metros"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:text="500 metros"
+              android:fontFamily="sans-serif-thin"
+              android:gravity="center_vertical|right"
+              android:layout_alignTop="@+id/sk_aviso"
+              android:layout_alignEnd="@+id/cb_estado"
+              android:layout_alignBottom="@+id/sk_aviso" />
+
+          <EditText
+              android:id="@+id/tx_hora"
+              android:layout_width="100dp"
+              android:layout_height="wrap_content"
+              android:inputType="time"
+              android:ems="10"
+              android:hint="Hora"
+              android:textColor="@android:color/white"
+              android:fontFamily="sans-serif-thin"
+              android:layout_marginTop="@dimen/dim_10"
+              android:textSize="16sp"
+              android:layout_below="@+id/sk_aviso"
+              android:layout_alignStart="@+id/sk_aviso"
+              android:gravity="center"/>
+
+
+          <CheckBox
+              android:id="@+id/chk_repetir"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textColor="@android:color/white"
+              android:fontFamily="sans-serif-thin"
+              android:checked="false"
+              android:text="Repetir"
+              android:layout_alignTop="@+id/tx_hora"
+              android:layout_alignEnd="@+id/txt_metros" />
+
+
+      </RelativeLayout>
+
+      <SlidingDrawer
+          android:id="@+id/slidingDrawer"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent"
+          android:content="@+id/content"
+          android:handle="@+id/handle"
+          android:layout_alignParentStart="true"
+          android:layout_below="@+id/content1"
+          android:layout_above="@+id/relativeLayout">
+
+          <LinearLayout
+              android:id="@+id/content"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical"
+              android:background="#494d6b"
+              android:paddingLeft="@dimen/dim_10"
+              android:paddingRight="@dimen/dim_10"
+              android:gravity="left|center_vertical">
+
+
+              <TextView
+                  android:id="@+id/textView4"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textAppearance="?android:attr/textAppearanceMedium"
+                  android:text="Escolher repetição"
+                  android:fontFamily="sans-serif-thin"
+                  />
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_gravity="center"
+                  android:gravity="center">
+
+                  <ToggleButton
+                      android:id="@+id/tg_dom"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:background="@drawable/circulo_dias"
+                      android:textOff="D"
+                      android:textOn="D"
+                      android:textSize="@dimen/dim_20"
+                      android:fontFamily="sans-serif-thin"/>
+                  <ToggleButton
+                      android:id="@+id/tg_seg"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:background="@drawable/circulo_dias"
+                      android:textOff="S"
+                      android:textOn="S"
+                      android:textSize="@dimen/dim_20"
+                      android:fontFamily="sans-serif-thin"/>
+                  <ToggleButton
+                      android:id="@+id/tg_ter"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:background="@drawable/circulo_dias"
+                      android:textOff="T"
+                      android:textOn="T"
+                      android:textSize="@dimen/dim_20"
+                      android:fontFamily="sans-serif-thin"/>
+                  <ToggleButton
+                      android:id="@+id/tg_qua"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:background="@drawable/circulo_dias"
+                      android:textOff="Q"
+                      android:textOn="Q"
+                      android:textSize="@dimen/dim_20"
+                      android:fontFamily="sans-serif-thin"/>
+                  <ToggleButton
+                      android:id="@+id/tg_qui"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:background="@drawable/circulo_dias"
+                      android:textOff="Q"
+                      android:textOn="Q"
+                      android:textSize="@dimen/dim_20"
+                      android:fontFamily="sans-serif-thin"/>
+                  <ToggleButton
+                      android:id="@+id/tg_sex"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:background="@drawable/circulo_dias"
+                      android:textOff="S"
+                      android:textOn="S"
+                      android:textSize="@dimen/dim_20"
+                      android:fontFamily="sans-serif-thin" />
+                  <ToggleButton
+                      android:id="@+id/tg_sab"
+                      android:layout_width="35dp"
+                      android:layout_height="35dp"
+                      android:background="@drawable/circulo_dias"
+                      android:textOff="S"
+                      android:textOn="S"
+                      android:textSize="@dimen/dim_20"
+                      android:fontFamily="sans-serif-thin"/>
+
+
+              </LinearLayout>
+
+          </LinearLayout>
+
+          <ImageView
+              android:id="@+id/handle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Handle"
+              android:visibility="gone" />
+
+      </SlidingDrawer>
+
+
+      <!--Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:text="Fechar" /-->
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/dim_40"
+          android:layout_alignParentBottom="true"
+          android:layout_alignParentLeft="true"
+          android:layout_alignParentRight="true"
+          android:id="@+id/relativeLayout">
+
+
+          <Button
+              android:id="@+id/btn_cancelar"
+              android:layout_width="100dp"
+              android:layout_height="match_parent"
+              android:text="Cancelar"
+              android:background="#33354b"
+              android:layout_alignParentTop="true"
+              android:layout_toStartOf="@+id/btn_ok" />
+          <Button
+              android:id="@+id/btn_ok"
+              android:layout_width="100dp"
+              android:layout_height="match_parent"
+              android:text="OK"
+              android:background="#33354b"
+              android:layout_alignParentTop="true"
+              android:layout_alignParentEnd="true" />
+
+
+      </RelativeLayout>
+
+  </RelativeLayout>
+
+    
+</RelativeLayout>
